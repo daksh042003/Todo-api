@@ -1,4 +1,4 @@
-const mongoose=require('mongoose');
+const mongoose = require('mongoose');
 
 require("dotenv").config();
 
@@ -10,10 +10,10 @@ const dbConnect=()=>{
     .then(()=>console.log("DB connection is successfully"))
     .catch( (error)=>{
            console.log("issue in DB connection");
-           console.error(error.message);
+           console.log(error);
            process.exit(1);
-    });
+    }); 
 
 }
 
-module.exports= dbConnect; 
+module.exports = dbConnect;  
